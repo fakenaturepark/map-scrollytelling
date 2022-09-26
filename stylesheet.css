@@ -226,7 +226,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 u {
@@ -271,9 +271,9 @@ a:hover {
 h1 {
   color: #251f26;
   font-size: 5rem;
-  font-family: Vollkorn;
+  font-family:  'Roboto', sans-serif;
   font-weight: 800;
-  text-align: center;
+  text-align: left;
   margin-bottom: 0;
   margin-top: 3%;
 }

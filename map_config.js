@@ -1,13 +1,13 @@
 var config = {
-  style: "mapbox://styles/annamei1913/cl49mbgl3003k14nvp4483s62",
+  style: "mapbox://styles/tonifluegel/cl55swuzk000l14pepnbmjqi8",
   accessToken:
-    "pk.eyJ1IjoiYW5uYW1laTE5MTMiLCJhIjoiY2wxbmh5dDJmMDFrZTNjbzhzZGloYjdsaCJ9.2d3SFzdAFD2O4tuUgAZ-pg",
+    "pk.eyJ1IjoidG9uaWZsdWVnZWwiLCJhIjoiY2wzbGZhOXozMHNwczNjbzcyM2RiZXB4dyJ9.RwBX5OQw4sGmYzp99VtWlQ",
   showMarkers: false,
   theme: "light",
   use3dTerrain: false,
   // title
-  title: "The Seed Tracker",
-  subtitle: "A sci-fi short story inspired by data journalism",
+  title: "meet me where?",
+  subtitle: "",
   byline: "",
   footer:
     'The scrollytelling project <em>The Seed Tracker</em> was created as part of the <em>Power of Maps. Maps of Power</em> course during the summer term 2022 at the <a href="https://design.fh-potsdam.de/University">University of Applied Sciences Potsdam</a> under the supervision of Prof. Sebastian Meier. You can find the project documentation on <a href="https://github.com/annameide/map-scrollytelling">GitHub</a>. <br></br>The science fiction short story is loosely based on the data journalism book <a href="https://www.kiwi-verlag.de/buch/toralf-staud-nick-reimer-deutschland-2050-9783462000689"><em>Deutschland 2050</em></a>, the Twitter accounts of climate journalist <a href="https://twitter.com/AnnikaJoeres">Annika Joeres</a>, Fridays for Future activist <a href="https://twitter.com/Luisamneubauer">Luisa Neubauer</a>, the <a href="https://twitter.com/tazKlima">Taz Klima</a> division and an expert interview with a former <a href="https://www.bund.net/">BUND</a> employee.<br></br>&copy; Anna Meide',
