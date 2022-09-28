@@ -74,6 +74,56 @@ var config = {
       onChapterExit: [],
     },
 
+    // first face
+    {
+      id: "_1--face",
+      alignment: "left",
+      title: "",
+
+      // pictures are loaded from the assets folder
+      image: "./assets/ruth.png",
+      description: "",
+      location: {
+        center: [13.0567, 52.3888],
+        zoom: 14,
+        pitch: 0.0,
+        bearing: 0.0,
+      },
+
+      onChapterEnter: [
+        {
+          layer: "leibnitzinstitut",
+          opacity: 0,
+        },
+
+        {
+          layer: "potsdam-city-fill",
+          opacity: 0.4,
+        },
+
+        {
+          layer: "habitat",
+          opacity: 1,
+        },
+
+        {
+          layer: "farmland-landuse",
+          opacity: 0,
+        },
+
+        {
+          layer: "parks-leisure",
+          opacity: 0,
+        },
+
+        {
+          layer: "orchard-landuse",
+          opacity: 0,
+        },
+      ],
+      onChapterExit: [],
+    },
+
     // 2. textbox
     {
       id: "2--textbox",
@@ -128,11 +178,11 @@ var config = {
     // 1. illustration
     {
       id: "_1--illustration",
-      alignment: "left",
+      alignment: "full",
       title: "",
 
       // pictures are loaded from the assets folder
-      image: "./assets/1_illustration.png",
+      image: "./assets/mentalmap1.png",
       description: "",
       location: {
         center: [13.0567, 52.3888],
