@@ -13,113 +13,49 @@ var config = {
     'The scrollytelling project <em>The Seed Tracker</em> was created as part of the <em>Power of Maps. Maps of Power</em> course during the summer term 2022 at the <a href="https://design.fh-potsdam.de/University">University of Applied Sciences Potsdam</a> under the supervision of Prof. Sebastian Meier. You can find the project documentation on <a href="https://github.com/annameide/map-scrollytelling">GitHub</a>. <br></br>The science fiction short story is loosely based on the data journalism book <a href="https://www.kiwi-verlag.de/buch/toralf-staud-nick-reimer-deutschland-2050-9783462000689"><em>Deutschland 2050</em></a>, the Twitter accounts of climate journalist <a href="https://twitter.com/AnnikaJoeres">Annika Joeres</a>, Fridays for Future activist <a href="https://twitter.com/Luisamneubauer">Luisa Neubauer</a>, the <a href="https://twitter.com/tazKlima">Taz Klima</a> division and an expert interview with a former <a href="https://www.bund.net/">BUND</a> employee.<br></br>&copy; Anna Meide',
 
   chapters: [
+
     // 1. textbox
     {
       id: "1--textbox", // id HAS TO be unique
       alignment: "left",
-      title: "Klimabunker Nr. 42",
+      title: "",
       image: "",
       description:
-        "Aurora arrived in her accomodations in Potsdam midsummer. The weather was relatively mild – the average 45°C, scorching sunlight and a looming sandstorm on the horizon.",
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
       location: {
         // look for offset in documentation / center of display 16:9 passt
-        center: [12.9, 52.4399],
-        zoom: 10.9,
+        center: [13.45208, 52.51299],
+        zoom: 13.01,
         pitch: 0,
         bearing: 0,
       },
+      callback:"backgroundUpdate1",
 
       // here come layers which you want to hide or show
       onChapterEnter: [
-        {
-          layer: "leibnitzinstitut",
-          opacity: 0,
-        },
-
-        {
-          layer: "potsdam-city-fill",
-          opacity: 0.4,
-        },
-
-        {
-          layer: "habitat",
-          opacity: 0,
-        },
-
-        {
-          layer: "farmland-landuse",
-          opacity: 0,
-        },
-
-        {
-          layer: "parks-leisure",
-          opacity: 0,
-        },
-
-        {
-          layer: "orchard-landuse",
-          opacity: 0,
-        },
-
-        {
-          layer: "brandenburg",
-          opacity: 0,
-        },
-
-        {
-          layer: "allotments-78oelq",
-          opacity: 0,
-        },
+        
       ],
       onChapterExit: [],
     },
 
     // first face
     {
-      id: "_1--face",
+      id: "1--ruth",
       alignment: "left",
       title: "",
 
       // pictures are loaded from the assets folder
-      image: "./assets/ruth.png",
-      description: "",
+      image: "",
+      description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim",
       location: {
-        center: [13.0567, 52.3888],
-        zoom: 14,
-        pitch: 0.0,
-        bearing: 0.0,
+        center: [13.45208, 52.51299],
+        zoom: 13.01,
+        pitch: 0,
+        bearing: 0,
       },
-
+      callback:"backgroundUpdate2",
       onChapterEnter: [
-        {
-          layer: "leibnitzinstitut",
-          opacity: 0,
-        },
-
-        {
-          layer: "potsdam-city-fill",
-          opacity: 0.4,
-        },
-
-        {
-          layer: "habitat",
-          opacity: 1,
-        },
-
-        {
-          layer: "farmland-landuse",
-          opacity: 0,
-        },
-
-        {
-          layer: "parks-leisure",
-          opacity: 0,
-        },
-
-        {
-          layer: "orchard-landuse",
-          opacity: 0,
-        },
+       
       ],
       onChapterExit: [],
     },
@@ -139,38 +75,10 @@ var config = {
         pitch: 0,
         bearing: 0,
       },
-
+      callback:"backgroundUpdate3",
       // here come layers which you want to hide or show
       onChapterEnter: [
-        {
-          layer: "leibnitzinstitut",
-          opacity: 0,
-        },
-
-        {
-          layer: "potsdam-city-fill",
-          opacity: 0.4,
-        },
-
-        {
-          layer: "habitat",
-          opacity: 1,
-        },
-
-        {
-          layer: "farmland-landuse",
-          opacity: 0,
-        },
-
-        {
-          layer: "parks-leisure",
-          opacity: 0,
-        },
-
-        {
-          layer: "orchard-landuse",
-          opacity: 0,
-        },
+      
       ],
       onChapterExit: [],
     },
@@ -182,7 +90,7 @@ var config = {
       title: "",
 
       // pictures are loaded from the assets folder
-      image: "./assets/mentalmap1.png",
+      image: "/assets/mentalmap1.png",
       description: "",
       location: {
         center: [13.0567, 52.3888],

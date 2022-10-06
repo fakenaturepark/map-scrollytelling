@@ -29,16 +29,69 @@
 
     <!-- css stylesheet -->
     <link rel="stylesheet" href="stylesheet.css" />
+    <style>
+      #background-image {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1s;
+      }
+
+      #hello {
+        position:fixed;
+        top: 40px;
+        right: 40px;
+        background:white;
+        font-size:50px;
+      }
+    </style>
   </head>
 
   <body>
     <div id="map"></div>
-
-    <div id="story"></div>
+    <div id="background-image"></div>
+    <div id="anchorImages">
+      <div id="ruth-anchor"></div>
+      <div id="family-anchor"></div>
+    </div>
+    <div id="story"></div>  
 
     <script src="./map_config.js"></script>
 
     <script>
+      window.backgroundUpdate1 = () => {
+        const el = document.getElementById('background-image');
+        el.style.backgroundImage = 'url(/assets/mentalmap1.png)';
+        el.style.opacity = 1;
+      };
+
+      window.backgroundUpdate2 = () => {
+        const el = document.getElementById('background-image');
+        el.style.opacity = 0;
+
+        const markers = document.querySelectorAll('.marker');
+        markers.forEach(m => {
+          m.style.opacity = 1;
+        });
+      };
+
+      window.backgroundUpdate3 = () => {
+        const el = document.getElementById('background-image');
+        el.style.opacity = 0;
+
+        const markers = document.querySelectorAll('.marker');
+        markers.forEach(m => {
+          m.style.opacity = 0;
+        });
+      };
+
+
       var layerTypes = {
         fill: ["fill-opacity"],
         line: ["line-opacity"],
@@ -85,6 +138,11 @@
       var scroller = scrollama();
 
       map.on("load", function () {
+
+        // GEOJSON
+        // MARKER hinzufügen
+        // .....
+
         if (config.use3dTerrain) {
           map.addSource("mapbox-dem", {
             type: "raster-dem",
