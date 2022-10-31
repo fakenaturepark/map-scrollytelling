@@ -50,6 +50,16 @@
         width: 100px;
        margin-left: -200px;
       }
+
+      .marker {
+      background-image: url('assets\icons-01.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+}
+
     </style>
   </head>
 
@@ -316,6 +326,49 @@
 
       // setup resize event
       window.addEventListener("resize", scroller.resize);
+
+
+      // Add GeoJSON
+
+      const geojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [13.454405412737726, 52.51555171864363]
+      },
+      properties: {
+        title: 'Mapbox',
+        description: 'Washington, D.C.'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [13.460284753624856,52.5151271684307]
+      },
+      properties: {
+        title: 'Mapbox',
+        description: 'San Francisco, California'
+      }
+    }
+  ]
+};
+
+// add markers to map
+for (const feature of geojson.features) {
+  // create a HTML element for each feature
+  const el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+}
+
+
     </script>
   </body>
 </html>

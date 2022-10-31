@@ -2,7 +2,7 @@ var config = {
   style: "mapbox://styles/tonifluegel/cl55swuzk000l14pepnbmjqi8",
   accessToken:
     "pk.eyJ1IjoidG9uaWZsdWVnZWwiLCJhIjoiY2wzbGZhOXozMHNwczNjbzcyM2RiZXB4dyJ9.RwBX5OQw4sGmYzp99VtWlQ",
-  showMarkers: false,
+  showMarkers: true,
   theme: "light",
   use3dTerrain: false,
   // title
@@ -11,7 +11,7 @@ var config = {
   byline: "",
   footer:
     '',
-    callback: "backgroundUpdate1",
+/*   callback: "backgroundUpdate1", */
 
 
   chapters: [
@@ -33,7 +33,7 @@ var config = {
         pitch: 0,
         bearing: 0,
       },
-       callback:"backgroundUpdate1",
+       /* callback:"backgroundUpdate1", */
     // here come layers which you want to hide or show
       onChapterEnter: [
         
