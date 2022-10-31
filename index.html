@@ -52,13 +52,29 @@
       }
 
       .marker {
-      background-image: url('assets\icons-01.png');
+      background-image: url('assets/icons-01.png');
       background-size: cover;
       width: 50px;
       height: 50px;
       border-radius: 50%;
       cursor: pointer;
 }
+
+.mapboxgl-popup {
+  max-width: 200px;
+  border-image: url('/assets/speechbubble.png');
+border-width: 45px 45px 125px 70px;
+border-image-slice: 45 45 125 70 fill;
+border-style: solid;
+border-image-repeat: round;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
 
     </style>
   </head>
@@ -333,17 +349,17 @@
       const geojson = {
   type: 'FeatureCollection',
   features: [
-    {
+/*     {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [13.454405412737726, 52.51555171864363]
+        coordinates: [13.453139354060191, 52.51854851677129]
       },
       properties: {
         title: 'Mapbox',
         description: 'Washington, D.C.'
       }
-    },
+    }, */
     {
       type: 'Feature',
       geometry: {
@@ -365,7 +381,15 @@ for (const feature of geojson.features) {
   el.className = 'marker';
 
   // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups
+      .setHTML(
+        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+      )
+  )
+  
+  .addTo(map);
 }
 
 
