@@ -2,7 +2,7 @@ var config = {
   style: "mapbox://styles/tonifluegel/cl55swuzk000l14pepnbmjqi8",
   accessToken:
     "pk.eyJ1IjoidG9uaWZsdWVnZWwiLCJhIjoiY2wzbGZhOXozMHNwczNjbzcyM2RiZXB4dyJ9.RwBX5OQw4sGmYzp99VtWlQ",
-  showMarkers: true,
+  showMarkers: false,
   theme: "light",
   use3dTerrain: false,
   // title
@@ -59,7 +59,10 @@ var config = {
        callback:"backgroundUpdate1",
     // here come layers which you want to hide or show
       onChapterEnter: [
-        
+        {
+          layer: "bersarinplatz",
+          opacity: 1,
+        },
       ],
       onChapterExit: [],
     },
